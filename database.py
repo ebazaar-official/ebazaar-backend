@@ -1,10 +1,11 @@
+import os
 import sqlite3
 from sqlite3 import Error
 from datetime import datetime
 
 class Database:
-    def __init__(self, db_file="digitalstore.db"):
-        self.db_file = db_file
+    def __init__(self, db_file=None):
+        self.db_file = db_file or os.getenv("DATABASE_PATH" , "digitalstore.db")
         self.init_database()
     
     def get_connection(self):
