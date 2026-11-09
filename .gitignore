@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+#ebazaar private data
+.env
+.env.*
+digitalstore
+digitalstore.*
+resources/*
+!resources/.gitkeep
