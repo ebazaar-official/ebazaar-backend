@@ -20,9 +20,15 @@ app = FastAPI(title="eBazaar API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_origins=[
+        "https://royal-pond-3feb.harryff0101.workers.dev",  # <-- PASTE YOUR URL HERE
+        "https://ebazaar.website",
+        "https://www.ebazaar.website",  # if you also use www
+        "http://127.0.0.1:5500",  # Keep for local testing
+        "http://localhost:5500",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
